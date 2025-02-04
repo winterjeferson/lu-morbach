@@ -1,10 +1,114 @@
+$margin: 70px;
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.bg--purple {
+    background-color: $color-purple;
+}
+
+.bg--purple-light {
+    background-color: $color-purple-light-13;
+}
+
+.bg--pink {
+    background-color: $color-pink;
+}
+
+.bg--white {
+    background-color: $color-white;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.menu-social {
+    padding-right: $regular;
+}
+
+.button--social {
+    padding: $small;
+}
+
 .main-menu {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
     padding: $extra-big 0;
 
     .logo {
-        margin-right: 50px;
-        max-width: 100px;
+        margin-right: $margin;
     }
+
+    .button {
+        border-color: transparent;
+        border-width: 2px;
+        color: $color-white;
+
+        &:hover {
+            border-color: $color-white;
+        }
+    }
+
+    .button-wrapper {
+        gap: $small;
+    }
+}
+
+.content-systemic,
+.content-about {
+    h1 {
+        font-size: 2.6rem;
+        font-weight: 800;
+        padding: $margin 0;
+    }
+}
+
+.content-systemic {
+    padding: $margin 0;
+
+    .left {
+        margin-left: 0;
+        text-align: left;
+    }
+}
+
+.content-therapies {
+    padding-bottom: $margin;
+}
+
+.content-me {
+    padding: $margin 0;
+
+    .left {
+        margin-left: 0;
+        text-align: left;
+    }
+}
+
+.title,
+.subtitle {
+    color: $color-purple;
+    font-weight: 200;
+}
+
+.title {
+    font-weight: 800;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.content--small {
+    margin: auto;
+    max-width: 70%;
 }
 
 .columns {
