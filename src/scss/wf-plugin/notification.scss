@@ -1,0 +1,79 @@
+.notification {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    padding: $regular;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    text-align: right;
+    top: 0;
+    user-select: none;
+    width: 100%;
+    z-index: z-index("notification");
+
+    &__item {
+        align-items: center;
+        @extend %extend-border-default;
+        margin-bottom: $small;
+        width: auto;
+    }
+
+    &--center {
+        align-items: center;
+    }
+
+    &--left {
+        align-items: flex-start;
+    }
+
+    &--right {
+        align-items: flex-end;
+    }
+
+    .button {
+        pointer-events: initial;
+    }
+
+    .button,
+    &__text {
+        display: inline-flex;
+    }
+
+    &--extra-small {
+        border-radius: $border-radius-extra-small;
+        padding: $extra-small;
+    }
+
+    &--small {
+        border-radius: $border-radius-small;
+        padding: $small;
+    }
+
+    &--regular {
+        border-radius: $border-radius-regular;
+        padding: $regular;
+    }
+
+    &--big {
+        border-radius: $border-radius-big;
+        padding: $big;
+    }
+
+    &--extra-big {
+        border-radius: $border-radius-extra-big;
+        padding: $extra-big;
+    }
+
+    @each $color in $arrColorNotification {
+        .notification--#{'' + $color + ''} {
+            background-color: color-extra-light(#{$color});
+            border-color: color-extra-light-border(#{$color});
+            color: color-dark(#{$color});
+
+            .icon {
+                fill: color-regular(#{$color});
+            }
+        }
+    }
+}

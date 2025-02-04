@@ -1,0 +1,15 @@
+.main-menu {
+    padding: $extra-big 0;
+
+    .logo {
+        margin-right: 50px;
+        max-width: 100px;
+    }
+}
+
+.columns {
+    .column {
+        flex: 1;
+        padding: 20px;
+    }
+}
