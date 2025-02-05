@@ -13,7 +13,7 @@ export class MenuToggle {
     }
 
     handleClick(args) {
-        const elSibling = args.target.nextElementSibling;
+        const elSibling = args.target.parentNode.querySelector('nav');
         const isCss = elSibling.classList.contains(this.cssOpen);
 
         if (isCss) {

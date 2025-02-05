@@ -3,26 +3,21 @@
 <div class="row bg--purple">
     <div class="container">
         <div class="row main-menu">
-            <div class="column">
+            <a href="#content_me">
                 <img src="./assets/{{version}}/img/logo/logo.png" alt="Lu Morback" class="logo">
-            </div>
-            <div class="column">
-                <nav class="button-wrapper">
-                    <div class="row right menu-social">
-                        <a href="{{linkInstagram}}" class="button button--regular button--social"
-                            target="_blank">
-                            <svg class="icon icon--regular icon--white">
-                                <use xlink:href="./assets/2-0-1/img/icon.svg#instagram"></use>
-                            </svg>
-                        </a>
-                        <a href="{{linkFacebook}}" class="button button--regular button--social"
-                            target="_blank">
-                            <svg class="icon icon--regular icon--white">
-                                <use xlink:href="./assets/2-0-1/img/icon.svg#facebook"></use>
-                            </svg>
-                        </a>
+            </a>
+            <button type="button" class="button button--regular button--regular--proportional button--green toggle-menu"
+                aria-label="Menu">
+                <svg class="icon icon--white icon--regular">
+                    <use xlink:href="./assets/{{version}}/img/icon.svg#menu"></use>
+                </svg>
+            </button>
+            <div class="button-wrapper">
+                <nav class="toggle-menu__content">
+                    <div class="row menu-social">
+                        {% include "include/content-social.html" %}
                     </div>
-                    <div class="row">
+                    <div class="row menu-content">
                         <a href="#content_therapies" class="button button-outline button--regular">
                             Terapias Oferecidas
                         </a>

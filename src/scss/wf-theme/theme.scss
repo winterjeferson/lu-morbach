@@ -1,3 +1,4 @@
+$margin-small: 20px;
 $margin: 70px;
 
 html,
@@ -27,26 +28,32 @@ body {
     align-items: center;
 }
 
-.menu-social {
-    padding-right: $regular;
-}
-
-.button--social {
-    padding: $small;
-
-    &:hover {
-        border-color: transparent !important;
-    }
-}
-
 .main-menu {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: $extra-big 0;
+    padding: $big;
+
+    .toggle-menu {
+        margin-bottom: 0;
+
+        &:hover {
+            border-color: $color-green !important;
+        }
+
+        .icon {
+            fill: $color-purple;
+        }
+    }
 
     .logo {
-        margin-right: $margin;
+        max-width: 250px;
+        width: 150px;
+
+        @include tablet {
+            margin-right: $margin;
+            width: unset;
+        }
     }
 
     .button {
@@ -54,33 +61,114 @@ body {
         border-width: 2px;
         color: $color-white;
 
+        @include tablet {
+            width: auto;
+        }
+
         &:hover {
             border-color: $color-white;
         }
     }
 
     .button-wrapper {
-        gap: $small;
+        align-items: flex-end;
+        display: inline-flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include tablet-landscape {
+            width: unset;
+        }
+    }
+
+    .toggle-menu__content {
+        flex-direction: column;
+    }
+
+    .toggle-menu__open {
+        align-items: end;
+        display: flex;
+        margin-top: $regular;
+
+        .menu-content {
+            align-items: flex-end;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+
+        .button {
+            padding-right: 0;
+        }
+    }
+
+    .menu-social {
+        justify-content: flex-end;
+        margin-right: - $regular;
+
+        @include tablet-landscape {
+            margin-right: unset;
+            padding-right: $regular;
+        }
+
+        .button--social {
+            display: inline-flex;
+            padding: $small;
+            width: auto;
+
+            &:hover {
+                border-color: transparent !important;
+            }
+        }
+    }
+
+    .icon--green {
+        fill: $color-green;
     }
 }
 
 .content-systemic,
 .content-about {
     h1 {
-        font-size: 2.6rem;
         font-weight: 800;
-        padding: $margin 0;
+        padding: $margin-small 0;
+
+        @include notebook {
+            padding: $margin 0;
+        }
+    }
+}
+
+.content-phrase,
+.content-systemic,
+.content-about {
+    h1 {
+        font-size: 1.6rem;
+
+        @include notebook {
+            font-size: 2.6rem;
+        }
     }
 }
 
 .content-about {
+    padding: $margin-small 0;
+
+    @include notebook {
+        padding: 0;
+    }
+
     h1 {
         font-weight: 200;
     }
 }
 
 .content-systemic {
-    padding: $margin 0;
+    padding: $margin-small 0;
+
+    @include notebook {
+        padding: $margin 0;
+    }
 
     .left {
         margin-left: 0;
@@ -90,10 +178,20 @@ body {
     .title {
         margin-left: 0;
     }
+
+    .columns {
+        .column {
+            flex: 100%;
+
+            @include notebook {
+                flex: 1;
+            }
+        }
+    }
 }
 
 .content-therapies {
-    padding-bottom: $margin;
+    padding: 0;
 
     .title {
         font-size: 1.6rem;
@@ -116,17 +214,33 @@ body {
 }
 
 .content-me {
-    max-height: 600px;
-    overflow: hidden;
-    padding: $margin 0 0 0;
+    padding: $margin-small 0 0 0;
+
+    @include notebook {
+        max-height: 600px;
+        overflow: hidden;
+        padding: $margin-small 0 0 0;
+    }
 
     .left {
         margin-left: 0;
         text-align: left;
     }
 
-    .column {
-        padding-bottom: 0 !important;
+    .columns {
+        .column {
+            flex: 100%;
+            padding: 20px;
+            padding-bottom: 0 !important;
+
+            @include notebook {
+                flex: 1;
+
+                img {
+                    margin-top: -40px;
+                }
+            }
+        }
     }
 }
 
@@ -138,7 +252,6 @@ body {
 
 .title {
     font-weight: 800;
-    text-align: center;
 }
 
 .subtitle {
@@ -153,9 +266,21 @@ body {
 }
 
 .columns {
+    img {
+        width: 100%;
+    }
+
     .column {
-        flex: 1;
+        flex: 100%;
         padding: 20px;
+
+        @include tablet {
+            flex: 50%;
+        }
+
+        @include notebook {
+            flex: 1;
+        }
     }
 }
 
