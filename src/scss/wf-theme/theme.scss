@@ -2,7 +2,9 @@ $margin: 70px;
 
 html,
 body {
+    color: $color-purple-dark-3;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .bg--purple {
@@ -31,6 +33,10 @@ body {
 
 .button--social {
     padding: $small;
+
+    &:hover {
+        border-color: transparent !important;
+    }
 }
 
 .main-menu {
@@ -67,6 +73,12 @@ body {
     }
 }
 
+.content-about {
+    h1 {
+        font-weight: 200;
+    }
+}
+
 .content-systemic {
     padding: $margin 0;
 
@@ -74,18 +86,47 @@ body {
         margin-left: 0;
         text-align: left;
     }
+
+    .title {
+        margin-left: 0;
+    }
 }
 
 .content-therapies {
     padding-bottom: $margin;
+
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 0;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .column {
+        padding-top: 0 !important;
+    }
+}
+
+.content-phrase {
+    padding: $extra-big;
+
+    .title {
+        font-weight: 200;
+    }
 }
 
 .content-me {
-    padding: $margin 0;
+    max-height: 600px;
+    overflow: hidden;
+    padding: $margin 0 0 0;
 
     .left {
         margin-left: 0;
         text-align: left;
+    }
+
+    .column {
+        padding-bottom: 0 !important;
     }
 }
 
@@ -115,5 +156,14 @@ body {
     .column {
         flex: 1;
         padding: 20px;
+    }
+}
+
+.copyright {
+    background-color: $color-purple;
+    padding: $big;
+
+    * {
+        color: $color-white;
     }
 }

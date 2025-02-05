@@ -6,7 +6,9 @@
 */
 html,
 body {
+  color: #261031;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .bg--purple {
@@ -35,6 +37,9 @@ body {
 
 .button--social {
   padding: 5px;
+}
+.button--social:hover {
+  border-color: transparent !important;
 }
 
 .main-menu {
@@ -65,6 +70,10 @@ body {
   padding: 70px 0;
 }
 
+.content-about h1 {
+  font-weight: 200;
+}
+
 .content-systemic {
   padding: 70px 0;
 }
@@ -72,17 +81,41 @@ body {
   margin-left: 0;
   text-align: left;
 }
+.content-systemic .title {
+  margin-left: 0;
+}
 
 .content-therapies {
   padding-bottom: 70px;
 }
+.content-therapies .title {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  margin-left: 0;
+  text-align: left;
+}
+.content-therapies .column {
+  padding-top: 0 !important;
+}
+
+.content-phrase {
+  padding: 40px;
+}
+.content-phrase .title {
+  font-weight: 200;
+}
 
 .content-me {
-  padding: 70px 0;
+  max-height: 600px;
+  overflow: hidden;
+  padding: 70px 0 0 0;
 }
 .content-me .left {
   margin-left: 0;
   text-align: left;
+}
+.content-me .column {
+  padding-bottom: 0 !important;
 }
 
 .title,
@@ -110,6 +143,14 @@ body {
 .columns .column {
   flex: 1;
   padding: 20px;
+}
+
+.copyright {
+  background-color: #52226b;
+  padding: 20px;
+}
+.copyright * {
+  color: #ffffff;
 }
 
 [class*=color--] {

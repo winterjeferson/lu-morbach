@@ -1,4 +1,4 @@
-{% from 'include/template-nunjucks.html' import version %}
+{% from 'include/template-nunjucks.html' import version, linkFacebook, linkInstagram %}
 
 <div class="row bg--purple">
     <div class="container">
@@ -9,13 +9,13 @@
             <div class="column">
                 <nav class="button-wrapper">
                     <div class="row right menu-social">
-                        <a href="https://www.facebook.com/lumorback" class="button button--regular button--social"
+                        <a href="{{linkInstagram}}" class="button button--regular button--social"
                             target="_blank">
                             <svg class="icon icon--regular icon--white">
                                 <use xlink:href="./assets/2-0-1/img/icon.svg#instagram"></use>
                             </svg>
                         </a>
-                        <a href="https://www.facebook.com/lumorback" class="button button--regular button--social"
+                        <a href="{{linkFacebook}}" class="button button--regular button--social"
                             target="_blank">
                             <svg class="icon icon--regular icon--white">
                                 <use xlink:href="./assets/2-0-1/img/icon.svg#facebook"></use>
@@ -23,15 +23,15 @@
                         </a>
                     </div>
                     <div class="row">
-                        <button type="button" class="button button-outline button--regular">
+                        <a href="#content_therapies" class="button button-outline button--regular">
                             Terapias Oferecidas
-                        </button>
-                        <button type="button" class="button button-outline button--regular">
+                        </a>
+                        <a href="#content_systemic" class="button button-outline button--regular">
                             Sobre o olhar sistêmico
-                        </button>
-                        <button type="button" class="button button-outline button--regular">
+                        </a>
+                        <a href="#content_me" class="button button-outline button--regular">
                             Sobre mim
-                        </button>
+                        </a>
                     </div>
                 </nav>
             </div>
