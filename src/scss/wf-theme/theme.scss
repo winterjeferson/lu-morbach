@@ -214,12 +214,10 @@ body {
 }
 
 .content-me {
-    padding: $margin-small 0 0 0;
+    padding: $margin-small 0;
 
     @include notebook {
-        max-height: 600px;
-        overflow: hidden;
-        padding: $margin-small 0 0 0;
+        padding: $margin 0;
     }
 
     .left {
@@ -235,10 +233,6 @@ body {
 
             @include notebook {
                 flex: 1;
-
-                img {
-                    margin-top: -40px;
-                }
             }
         }
     }

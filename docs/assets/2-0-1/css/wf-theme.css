@@ -201,13 +201,11 @@ body {
 }
 
 .content-me {
-  padding: 20px 0 0 0;
+  padding: 20px 0;
 }
 @media (min-width: 1366px) {
   .content-me {
-    max-height: 600px;
-    overflow: hidden;
-    padding: 20px 0 0 0;
+    padding: 70px 0;
   }
 }
 .content-me .left {
@@ -222,9 +220,6 @@ body {
 @media (min-width: 1366px) {
   .content-me .columns .column {
     flex: 1;
-  }
-  .content-me .columns .column img {
-    margin-top: -40px;
   }
 }
 
