@@ -29,9 +29,9 @@ body {
 }
 
 .main-menu {
-    align-items: center;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     padding: $big;
 
     .toggle-menu {
@@ -125,6 +125,18 @@ body {
 
     .icon--green {
         fill: $color-green;
+    }
+
+    .column {
+        flex-direction: column;
+
+        &:last-child {
+            flex: 1;
+        }
+
+        @include tablet-landscape {
+            align-self: anchor-center;
+        }
     }
 }
 

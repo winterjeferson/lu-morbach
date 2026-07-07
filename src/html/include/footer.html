@@ -1,5 +1,5 @@
         {% from 'include/template-nunjucks.html' import version %}
-     
+
         <script type="module">
             import * as wfp from './assets/{{version}}/js/wf-plugin.js';
             import * as wft from './assets/{{version}}/js/wf-theme.js';
@@ -44,6 +44,15 @@
                 window.wfpLoadingMain.hide(), {
                     once: true
                 });
+        </script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FKSVWN1XX"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-8FKSVWN1XX');
         </script>
     </main>
 </body>
