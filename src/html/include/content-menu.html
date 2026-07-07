@@ -3,30 +3,35 @@
 <div class="row bg--purple">
     <div class="container">
         <div class="row main-menu">
-            <a href="#content_me">
-                <img src="./assets/{{version}}/img/logo/logo.png" alt="Lu Morback" class="logo">
-            </a>
-            <button type="button" class="button button--regular button--regular--proportional button--green toggle-menu"
-                aria-label="Menu">
-                <svg class="icon icon--white icon--regular">
-                    <use xlink:href="./assets/{{version}}/img/icon.svg#menu"></use>
-                </svg>
-            </button>
-            <div class="button-wrapper">
+            <div class="column">
+                <a href="#content_me">
+                    <img src="./assets/{{version}}/img/logo/logo.png" alt="Lu Morback" class="logo">
+                </a>
+            </div>
+            <div class="column">
+                <button type="button"
+                    class="button button--regular button--regular--proportional button--green toggle-menu"
+                    aria-label="Menu">
+                    <svg class="icon icon--white icon--regular">
+                        <use xlink:href="./assets/{{version}}/img/icon.svg#menu"></use>
+                    </svg>
+                </button>
                 <nav class="toggle-menu__content">
-                    <div class="row menu-social">
-                        {% include "include/content-social.html" %}
-                    </div>
-                    <div class="row menu-content">
-                        <a href="#content_therapies" class="button button-outline button--regular">
-                            Services
-                        </a>
-                        <a href="#content_systemic" class="button button-outline button--regular">
-                            What are Family Constellations
-                        </a>
-                        <a href="#content_me" class="button button-outline button--regular">
-                            About me
-                        </a>
+                    <div class="button-wrapper">
+                        <div class="row menu-social">
+                            {% include "include/content-social.html" %}
+                        </div>
+                        <div class="row menu-content">
+                            <a href="#content_therapies" class="button button-outline button--regular">
+                                Services
+                            </a>
+                            <a href="#content_systemic" class="button button-outline button--regular">
+                                What are Family Constellations
+                            </a>
+                            <a href="#content_me" class="button button-outline button--regular">
+                                About me
+                            </a>
+                        </div>
                     </div>
                 </nav>
             </div>

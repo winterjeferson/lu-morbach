@@ -7,10 +7,10 @@ export class MenuToggle {
     }
 
     buildMenu() {
-        this.elButton.forEach((el) => {
-            wfpHelper.addClick(el, this.handleClick);
-        });
-    }
+    this.elButton.forEach((el) => {
+        el.onclick = this.handleClick;
+    });
+}
 
     handleClick(args) {
         const elSibling = args.target.parentNode.querySelector('nav');

@@ -35,6 +35,7 @@ body {
     padding: $big;
 
     .toggle-menu {
+        align-self: flex-end;
         margin-bottom: 0;
 
         &:hover {
@@ -239,6 +240,10 @@ body {
                 flex: 1;
             }
         }
+    }
+
+    .button--social {
+        border: 0;
     }
 }
 
