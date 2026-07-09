@@ -49,11 +49,10 @@ body {
 
     .logo {
         max-width: 250px;
-        width: 150px;
 
         @include tablet {
             margin-right: $margin;
-            width: unset;
+            max-width: 350px;
         }
     }
 
