@@ -1,12 +1,12 @@
-        {% from 'include/template-nunjucks.html' import version %}
+        {% from 'include/template-nunjucks.html' import ulImage, ulJs %}
 
         <script type="module">
-            import * as wfp from './assets/{{version}}/js/wf-plugin.js';
-            import * as wft from './assets/{{version}}/js/wf-theme.js';
+            import * as wfp from '{{ulJs}}wf-plugin.js';
+            import * as wft from '{{ulJs}}wf-theme.js';
 
             window.wfpLanguage = "pt";
             window.wfpVersionWF = "{{version}}";
-            window.wfpIconAddress = "./assets/{{version}}/img/icon.svg#";
+            window.wfpIconAddress = "{{ulImage}}icon.svg#";
 
             window.wfpCarousel = new wfp.Carousel();
             window.wfpComponent = new wfp.Component();

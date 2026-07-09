@@ -1,11 +1,11 @@
-{% from 'include/template-nunjucks.html' import version, linkFacebook, linkInstagram %}
+{% from 'include/template-nunjucks.html' import ulLogo, ulImage, linkFacebook, linkInstagram %}
 
 <div class="row bg--primary">
     <div class="container">
         <div class="row main-menu">
             <div class="column">
                 <a href="#content_me">
-                    <img src="./assets/{{version}}/img/logo/logo.png" alt="Lu Morback" class="logo">
+                    <img src="{{ulLogo}}logo.png" alt="Lu Morback" class="logo">
                 </a>
             </div>
             <div class="column">
@@ -13,7 +13,7 @@
                     class="button button--regular button--regular--proportional button--green toggle-menu"
                     aria-label="Menu">
                     <svg class="icon icon--white icon--regular">
-                        <use xlink:href="./assets/{{version}}/img/icon.svg#menu"></use>
+                        <use xlink:href="{{ulImage}}icon.svg#menu"></use>
                     </svg>
                 </button>
                 <nav class="toggle-menu__content">
